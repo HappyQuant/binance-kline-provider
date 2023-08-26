@@ -1,0 +1,12 @@
+{
+  "dataSource": {
+    "driverName": "postgres",
+    "addr": "127.0.0.1:5432",
+    "database": "dbname",
+    "user": "user",
+    "password": "password"
+  },
+  "restServer": {
+    "addr": ":30080"
+  }
+}
