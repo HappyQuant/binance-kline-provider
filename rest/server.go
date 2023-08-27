@@ -25,6 +25,9 @@ func (server *HttpServer) Start() {
 	r := gin.Default()
 	r.Use(cors.Default())
 
+	r.GET("/api/kline/:symbol/:interval/previous", GetPreviousKlines)
+	r.GET("/api/kline/:symbol/:interval/next", GetNextKlines)
+
 	err := r.Run(server.addr)
 	if err != nil {
 		panic(err)
